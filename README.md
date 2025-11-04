@@ -1,1 +1,1 @@
-[# math](https://sofademina.github.io/math/)
+https://sofademina.github.io/math/
