@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Оформление брони</title>
+        <style>
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+  }
+  nav ul li a.active {
+    color: #ffffff;
+    background-color: #b4d7c9;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 5px;
+  }
+</style>
+</head>
+
+<body>
+
+    <table border="1" width="1330">
+      <!-- Левая колонка: навигация -->
+      <td width="200" height="630" valign="top">
+        <h1 align="center">Репетитор по математике</h1>
+        <h2 align="center">Навигация</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html" target="_self">
+                <img src="home.webp" alt="Главная страница" width="20" height="20">
+              </a>
+            </li>
+            <li><a href="aboutme.html" target="_self">Обо мне</a></li>
+            <li><a href="uslugi.html" target="_self">Услуги</a></li>
+            <li><a href="forma.html" class="active">Заявка на обучение</a></li>
+            <li><a href="https://www.avito.ru/moskva/predlozheniya_uslug/repetitor_po_matematike_4339127179?utm_campaign=native&utm_medium=item_page_ios&utm_source=soc_sharing_seller"
+                target="_blank">Ссылка на Авито</a></li>
+            <li><a href="contact.html" target="_self">Связаться со мной!</a></li>
+          </ul>
+        </nav>
+      </td>
+            <td valign="top" margin="50">
+                <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+                    <h3>Запись на занятие</h3>
+
+<form action="https://httpbin.org/post" method="post">
+  <label>Имя ученика: <input type="text" name="student_name" required></label><br><br>
+  <label>Класс: <input type="number" name="grade" min="5" max="11" value="9"></label><br><br>
+
+  <label>Выберите тип подготовки:</label><br>
+  <input type="radio" name="prep_type" value="ege" checked> ЕГЭ<br>
+  <input type="radio" name="prep_type" value="oge"> ОГЭ<br>
+  <input type="radio" name="prep_type" value="oge"> Высшая математика/ТВиМС<br>
+  <input type="radio" name="prep_type" value="oge"> Лицей ВШЭ<br>
+  <input type="radio" name="prep_type" value="oge"> Проверочные работы ВПР/МЦКО<br>
+  <input type="radio" name="prep_type" value="school"> Школьная программа<br><br>
+
+  <label>Предпочтительный формат занятий:</label><br>
+  <input type="checkbox" name="format_online" value="online" checked> Онлайн<br>
+  <input type="checkbox" name="format_offline" value="offline"> Очно<br><br>
+
+  <label>Дата первого занятия: <input type="date" name="first_lesson_date"></label><br><br>
+
+  <label>Придумайте пароль для личного кабинета: 
+    <input type="password" name="password">
+  </label><br><br>
+
+  <!-- Скрытое поле -->
+  <input type="hidden" name="form_type" value="lesson_booking">
+
+  <!-- Кнопка отправки -->
+  <input type="submit" value="Записаться">
+</form>
+
+            </td>
+        </tr>
+    </table>
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('UserEnter');
+   
+    if (!timeField) {
+        console.error('Поле submitTime не найдено');
+        return;
+    }
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const now = new Date();
+        timeField.value = now.toISOString();
+        console.log('Оформление брони');
+        console.log('Время отправки:', timeField.value);
+        console.log('Фамилия:', this.last_name.value);
+        console.log('Имя:', this.first_name.value);
+        console.log('Количество гостей:', this.guest_number.value);
+        console.log('Дата брони:', this.user_date.value);
+        console.log('Время брони:', this.user_time.value);
+        console.log('Телефон:', this.phone.value);
+        console.log('Комментарий:', this.comment.value);
+        console.log('Кодовое слово:', this.password.value);
+       
+    });
+});
+    </script>                    
+
+</body>
+
+</html>
